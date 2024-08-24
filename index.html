@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/index.css">
+    <title>IFYR</title>
+</head>
+<body>
+    <section id="submitted-popup">
+    
+        <div class="modal-box">
+          <i class="fa-regular fa-circle-check"></i>
+          <h2 id="msg"></h2>
+  
+        </div>
+      </section>
+  <section id="failed-popup">
+      <span class="overlay"></span>
+        <div class="modal-box">
+          <i class="fa-regular fa-circle-xmark"></i>
+          <h2 id="failed-msg"></h2>
+          <div class="buttons">
+            <button id="close-btn">ok, close</button>
+          </div>
+        </div>
+      </section>
+      <header>
+        <div class="logos">
+            <img src="imgs/YSJ-logo.png" class="ysj-logo" alt="">
+            <div class="logo">
+                <img src="imgs/IFYR-logo.jpg" class="ifyr-logo" alt="">
+            <p>THE International Fair of <br>
+                Young Researchers <br>
+                <span>Powered by ysj</p>
+            </div>
+        </div>
+        <h1>Submition Portal</h1>
+    </header>
+    <div class="controls">
+        <h2>THE INTERNATIONAL FAIR OF YOUNG RESEARCHERS <br>
+            2025 SEASON</h2>
+    </div>
+    <div class="red-row">
+        <a href="index.html?tab=login" class="active" id="login-tab">Login</a>
+        <a href="index.html?tab=create"  id="create-tab">Create Account</a>
+        <a href="index.html?tab=forgot"  id="forgot-tab">Forgot Password</a>
+    </div>
+    <div class="container">
+        <form id="login-form">
+            <div class="input-group">
+                <h5>Login</h5>
+                <div class="input-fields">
+                    <div class="input-field">
+                        <label for="login-email">Email Adress</label>
+                        <input type="email" placeholder="Email Adress" id="login-email">
+                    </div>
+                    <div class="input-field">
+                        <label for="login-password">Password</label>
+                        <input type="password" placeholder="Password" id="login-password">
+                    </div>
+                </div>
+            </div>
+            <div class="continue-option">
+                <button class="google" id="continue-google">
+					<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" viewBox="0 0 256 262">
+					<path fill="#4285F4" d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622 38.755 30.023 2.685.268c24.659-22.774 38.875-56.282 38.875-96.027"></path>
+					<path fill="#34A853" d="M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055-34.523 0-63.824-22.773-74.269-54.25l-1.531.13-40.298 31.187-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1"></path>
+					<path fill="#FBBC05" d="M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82 0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602l42.356-32.782"></path>
+					<path fill="#EB4335" d="M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0 79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251"></path>
+				  </svg>
+					Continue with Google
+				  </button>
+            </div>
+            <div class="buttons">
+                <button type="submit">Login</button>
+            </div>
+            
+        </form>
+        <form id="create-form">
+            <div class="input-group">
+                <h5>Create account</h5>
+                <div class="input-fields">
+                    <div class="input-field">
+                        <label for="create-name">Full Name</label>
+                        <input type="text" placeholder="Full Name" id="create-name">
+                    </div>
+                    <div class="input-field">
+                        <label for="create-email">Email Adress</label>
+                        <input type="email" placeholder="Email Adress" id="create-email">
+                    </div>
+                    <div class="input-field">
+                        <label for="create-password">Password</label>
+                        <input type="password" placeholder="Password" id="create-password">
+                    </div>
+                </div>
+            </div>
+            <div class="continue-option">
+                <button class="google" id="continue2-google">
+					<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" viewBox="0 0 256 262">
+					<path fill="#4285F4" d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622 38.755 30.023 2.685.268c24.659-22.774 38.875-56.282 38.875-96.027"></path>
+					<path fill="#34A853" d="M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055-34.523 0-63.824-22.773-74.269-54.25l-1.531.13-40.298 31.187-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1"></path>
+					<path fill="#FBBC05" d="M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82 0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602l42.356-32.782"></path>
+					<path fill="#EB4335" d="M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0 79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251"></path>
+				  </svg>
+					Continue with Google
+				  </button>
+            </div>
+            <div class="buttons">
+                <button type="submit">Create Account</button>
+            </div>
+        </form>
+        <form id="forgot-form">
+            <div class="input-group">
+                <h5>Forgot password</h5>
+                <div class="input-fields">                    
+                    <div class="input-field">
+                        <label for="forgot-email">Email Adress</label>
+                        <input type="email" placeholder="Email Adress" id="forgot-email">
+                    </div>
+                </div>
+            </div>
+            <div class="buttons">
+                <button type="submit">Send email</button>
+            </div>
+        </form>
+    </div>
+    <footer>
+        <h2>If you encounter any problems, please contact US</h2>
+        <div class="contact-icons">
+            <a href="mailto:competition@ys-journal.org">
+                <div class="contact-icon">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p>competition@ys-journal.org</p>
+                </div>
+            </a>
+            <a href="tel:+201102432367">
+                <div class="contact-icon">
+                    <i class="fa-solid fa-phone"></i>
+                    <p>+201102432367</p>
+                </div>
+            </a>
+        </div>
+    </footer>
+    <script src="js/index.js"></script>
+    <script type="module" src="js/login-create.js"></script>
+</body>
+</html>

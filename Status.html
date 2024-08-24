@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/status.css">
+    <title>IFYR</title>
+</head>
+<body>
+  <header>
+    <div class="logos">
+        <img src="imgs/YSJ-logo.png" class="ysj-logo" alt="">
+        <div class="logo">
+            <img src="imgs/IFYR-logo.jpg" class="ifyr-logo" alt="">
+        <p>THE International Fair of <br>
+            Young Researchers <br>
+            <span>Powered by ysj</p>
+        </div>
+    </div>
+    <h1>Submition Portal</h1>
+</header>
+    <div class="controls">
+        <h2><span id="welcome-team"></span> | THE INTERNATIONAL FAIR OF YOUNG RESEARCHERS <br>
+            2025 SEASON</h2>
+    </div>
+    <div class="red-row">
+        <a href="Status.html?tab=status" class="active" id="status-tab">Status</a>
+        <a href="Status.html?tab=announcments"  id="announcments-tab">Announcments</a>
+    </div>
+    <div class="container">
+        <div class="status" id="status-content">
+            <div class="big">
+              <h2>Status Updates</h2>
+              <p>no status updates yet</p>
+            </div>
+            <div class="smalls">
+              <div class="first-small">
+                <h2>Checklist</h2>
+                <div class="checkbox application">
+                  <input type="checkbox"  checked disabled/>
+                  <label for="application">Application</label>
+                </div>
+                <div class="checkbox reviewed">
+                  <input type="checkbox" checked disabled />
+                  <label for="reviewed">Reviewed</label>
+                </div>
+              </div>
+              <div class="second-small">
+                <h2>Adimtion Status</h2>
+                <p>Your Application is submitted on <span id="status-date"></span> and is currnetly being reviewed.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="content" id="announcments-content">
+            <h2>No announcments yet!</h2>
+          </div>
+          
+          
+        </div>
+    <footer>
+        <h2>If you encounter any problems, please contact US</h2>
+        <div class="contact-icons">
+            <a href="mailto:competition@ys-journal.org">
+                <div class="contact-icon">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p>competition@ys-journal.org</p>
+                </div>
+            </a>
+            <a href="tel:+201102432367">
+                <div class="contact-icon">
+                    <i class="fa-solid fa-phone"></i>
+                    <p>+201102432367</p>
+                </div>
+            </a>
+        </div>
+    </footer>
+    <script src="js/status.js"></script>
+    <script type="module" src="js/status-back.js"></script>
+</body>
+</html>

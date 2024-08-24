@@ -1,0 +1,648 @@
+@import url('https://fonts.cdnfonts.com/css/lemonmilk');
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lemon/Milk', sans-serif;
+}
+section {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: #00000092;
+  z-index: 9999999;
+  display: none;
+}
+section.active{
+  display: block;
+}
+
+section button {
+  font-size: 18px;
+  font-weight: 400;
+  color: #fff;
+  padding: 14px 22px;
+  border: none;
+  background: #d32424;
+  cursor: pointer;
+}
+section button:hover {
+  background-color: #b31f1f;
+}
+section button.show-modal,
+.modal-box {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+section.active .show-modal {
+  display: none;
+}
+.overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  display: none;
+  pointer-events: none;
+}
+section.active .overlay {
+
+  pointer-events: auto;
+}
+.modal-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 380px;
+  width: 100%;
+  padding: 30px 20px;
+  border-radius: 24px;
+  background-color: #fff;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  transform: translate(-50%, -50%) scale(1.2);
+}
+section.active .modal-box {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+.modal-box i {
+  font-size: 70px;
+  color: green;
+}
+.modal-box i.fa-circle-xmark{
+  color: red;
+}
+.modal-box h2 {
+  margin-top: 20px;
+  font-size: 25px;
+  font-weight: 500;
+  color: #1e1d1d;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+.modal-box h3 {
+  font-size: 16px;
+  font-weight: 400;
+  color: #333;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+.modal-box .buttons {
+  margin-top: 25px;
+}
+.modal-box button {
+  font-size: 14px;
+  padding: 6px 12px;
+  margin: 0 10px;
+}
+header{
+    background: #d6d6d6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+header .logos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logos img{
+    width: 130px;
+    margin-right: 10px;
+}
+.logos .logo{
+  display: flex;
+}
+.logos p{
+  font-size: 35px;
+  font-weight: 900;
+  line-height: 40px;
+}
+.logos p span{
+  font-size: 28px;
+  color: #424242;
+}
+@media only screen and (max-width: 1040px){
+  header .logos{
+    flex-direction: column;
+  }
+  .logos img{
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  
+}
+@media only screen and (max-width: 700px){
+  .logos .logo p{
+    font-size: 27px;
+  }
+  .logos .logo p span{
+    font-size: 22px;
+  }
+  .logos .ifyr-logo{
+    width: 100px;
+  }
+}
+@media only screen and (max-width: 525px){
+  .logos .logo {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .logos .ifyr-logo{
+    display: block;
+    margin: auto;
+  }
+  .logos p{
+    text-align: center;
+  }
+}
+header h1{
+    margin-top: 30px;
+    font-size: 45px;
+    color: #d32424;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: normal;
+}
+.controls{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    margin-top: 20px;
+    width: 97%;
+    margin: auto;
+    max-width: 1500px;
+}
+.controls h2{
+    font-size: 28px;
+}
+.controls h2 span{
+  color: #d32424;
+}
+button{
+    border: none;
+    outline: none;
+    background: #d32424;
+    font-size: 20px;
+    padding: 15px;
+    color: #fff;
+    cursor: pointer;
+}
+.controls button{
+  width: 200px;
+}
+@media only screen and (max-width: 880px){
+  .controls{
+    flex-direction: column;
+    justify-content: center;
+  }
+  .controls h2{
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .controls button{
+    display: block;
+    margin: auto;
+  }
+}
+.red-row{
+    width: 100%;
+    background: #d32424;
+    display: flex;
+    justify-content: center;
+}
+.red-row a{
+    color: #fff;
+    padding: 10px;
+    text-transform: uppercase;
+    font-size: 17px;
+    text-decoration: none;
+    text-align: center;
+}
+a.active{
+    background: #a01b1b;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+.content{
+  width: 100%;
+}
+.input-group{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    width: 90%;
+    margin: auto;
+    max-width: 1500px;
+}
+
+.input-group h3{
+    font-size: 27px;
+    color: #d32424;
+    text-transform: uppercase;
+    width: 18%;
+    margin-right: 20px;
+}
+.input-fields{
+    padding: 30px;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-left: 5px solid #d32424;
+    margin-left: 10px;
+    width: 55%;
+
+}
+.input-fields h4{
+    font-size: 22px;
+    color: #d32424;
+    margin-bottom: 15px;
+    font-family: "Averia Serif Libre", serif;
+    margin-top: 20px;
+}
+.input-fields .input-field{
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.input-field *{
+    font-family: "Averia Serif Libre", serif;
+}
+.input-field label{
+    font-size: 20px;
+    margin-right: 20px;
+}
+.input-field input, .input-field select{
+    padding: 5px;
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: 5px solid #d32424;
+    font-size: 17px;
+    width: 70%;
+    
+}
+
+@media only screen and (max-width: 1170px){
+  .input-group{
+    flex-direction: column;
+    width: 100vw;
+  }
+  .input-group h3{
+    margin-bottom: 10px;
+  }
+  .input-field{
+    flex-direction: column;
+   width: 80vw;
+  }
+  
+
+  .input-field input, .input-field select{
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 1170px) {
+  .input-field {
+    flex-direction: column;
+  }
+  .input-field label {
+    margin-right: 0;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: left;
+  }
+}
+.file-container{
+  width: 60vw;
+  max-width: 700px;
+  height: 300px;
+  border-radius: 20px;
+  background: #d32424;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+@media only screen and (max-width: 950px){
+  .file-container{
+    width: 80vw;
+  }
+}
+.file-container i{
+  font-size: 100px;
+  margin-bottom: 15px;
+}
+.file-container p{
+  font-size: 18px;
+  font-family: "Averia Serif Libre", serif;
+  text-align: center;
+}
+.file-container p span{
+  font-family: "Averia Serif Libre", serif;
+  font-size: 15px;
+}
+.file-data{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: fit-content;
+  padding-left: 30px;
+}
+.file-data p{
+  color: #d32424;
+  font-size: 22px;
+  font-family: "Averia Serif Libre", serif;
+}
+.file-data p span{
+  font-size: 22px;
+  font-family: "Averia Serif Libre", serif;
+}
+.file-data button{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 150px;
+
+}
+
+.radio-input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 35px;
+    margin-top: 20px;
+  }
+  .radio-label{
+    font-size: 20px;
+    margin-left: 15px;
+    display: block;
+    margin-top: 30px;
+    font-family: "Averia Serif Libre", serif;
+  }
+  .radio-input * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .radio-input label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 250px;
+    cursor: pointer;
+    height: 30px;
+    position: relative;
+  }
+  
+  .radio-input label::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 45px;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    border-radius: 10px;
+    border: 2px solid transparent;
+  }
+  .radio-input label:hover::before {
+    transition: all 0.2s ease;
+    background-color: none;
+  }
+  
+  .radio-input .label:has(input:checked)::before {
+    background-color: none;
+    height: 50px;
+  }
+  .radio-input .label .text {
+    color: #000;
+    font-family: "Averia Serif Libre", serif;
+    font-size: 19px;
+  }
+  
+  .radio-input .label input[type="radio"] {
+    border: 1px solid #dc1616;
+    appearance: none;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .radio-input .label input[type="radio"]:checked {
+    -webkit-animation: puls 0.7s forwards;
+    animation: pulse 0.7s forwards;
+  }
+  
+  .radio-input .label input[type="radio"]:before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    transition: all 0.1s cubic-bezier(0.165, 0.84, 0.44, 1);
+    background-color: #dc1616;
+    transform: scale(0);
+  }
+  
+  .radio-input .label input[type="radio"]:checked::before {
+    transform: scale(1);
+  }
+  
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+    }
+    70% {
+      box-shadow: 0 0 0 8px rgba(255, 255, 255, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+  }
+  .buttons{
+    display: flex;
+    flex-direction: column;
+  }
+  .buttons button{
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 200px;
+  }
+  .buttons .warning{
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #d32424;
+    border: 3px solid #d32424;
+    padding: 10px;
+    width: 65vw;
+  }
+
+input[type='file']{
+    display: none;
+}
+
+.instructions-content{
+  width: 90%;
+  max-width: 1500px;
+}
+.instructions-content h2{
+  font-size: 45px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #b82222;
+  font-family: "Averia Serif Libre", serif;
+}
+.instructions-content p{
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-family: "Poppins", serif;
+}
+footer{
+  background: #d6d6d6;
+  padding: 20px;
+  margin-top: 50px;
+}
+footer h2{
+  color: #d32424;
+}
+footer .contact-icons{
+  display: flex;
+}
+footer a{
+  color: #000;
+  text-decoration: none;
+  font-size: 20px;
+}
+footer a .contact-icon{
+  display: flex;
+  align-items: center;
+  margin: 15px;
+  gap: 10px;
+}
+@media only screen and (max-width: 650px){
+  footer .contact-icons{
+    flex-direction: column;
+  }
+}
+
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+  height: 120px;
+  width: 100%;
+  padding-top: 40px;
+  font-family: "Poppins", sans-serif;
+  justify-content: center;
+}
+
+.wrapper .icon {
+  position: relative;
+  background: #fff;
+  border-radius: 50%;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon svg{
+  fill: #000;
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #fff;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  font-family: "Poppins", serif;
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #fff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover svg,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background: #0a5ecb;
+  color: #fff;
+  fill: #fff;
+}
+
+.wrapper .linkedin:hover,
+.wrapper .linkedin:hover svg,
+.wrapper .linkedin:hover .tooltip,
+.wrapper .linkedin:hover .tooltip::before {
+  background: #0072b1;
+  color: #fff;
+  fill: #fff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover:hover svg,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background: #e4405f;
+  color: #fff;
+  fill: #fff;
+}
+
+
+

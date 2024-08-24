@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="shortcut icon" type="image/png" href="imgs/YSJ-logo.png"/>
+    <link rel="stylesheet" href="css/styles.css">
+    <meta name="theme-color" content="#d32424">
+    <title>IFYR</title>
+</head>
+<body>
+    <section id="submitted-popup">
+    
+          <div class="modal-box">
+            <i class="fa-regular fa-circle-check"></i>
+            <h2>Portal Submitted Successfully!</h2>
+            <h3>Your portal have been submitted now go check your status</h3>
+    
+            <div class="buttons">
+              <a href="Status.html?tab=status">
+              <button>Go to status</button>
+              </a>
+            </div>
+          </div>
+        </section>
+    <section id="failed-popup">
+        <span class="overlay"></span>
+          <div class="modal-box">
+            <i class="fa-regular fa-circle-xmark"></i>
+            <h2 id="failed-msg"></h2>
+            <div class="buttons">
+              <button id="close-btn">ok, close</button>
+            </div>
+          </div>
+        </section>
+    <header>
+        <div class="logos">
+            <img src="imgs/YSJ-logo.png" class="ysj-logo" alt="">
+            <div class="logo">
+                <img src="imgs/IFYR-logo.jpg" class="ifyr-logo" alt="">
+            <p>THE International Fair of <br>
+                Young Researchers <br>
+                <span>Powered by ysj</p>
+            </div>
+        </div>
+        <h1>Submition Portal</h1>
+    </header>
+    <div class="controls">
+        <h2><span id="username"></span> | THE INTERNATIONAL FAIR OF YOUNG RESEARCHERS <br>
+            2024 SEASON</h2>
+        <button id="signout">SIGN OUT</button>
+    </div>
+    <div class="red-row">
+        <a href="IFYR.html?tab=instructions" id="instructions-tab">Instructions</a>
+        <a href="IFYR.html?tab=app" class="active" id="app-tab">Application</a>
+    </div>
+    <div class="container">
+        <div class="instructions-content" id="instructions-content">
+            <h2>Welcome, to IFYR!</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus impedit suscipit magni, molestias ullam eaque quam natus nam quo, similique accusantium? Mollitia voluptates, illum assumenda voluptatum eius dolore accusamus repellendus cupiditate ullam modi autem sit dicta eveniet! Assumenda doloribus magnam, perspiciatis laudantium hic, soluta nostrum magni, quidem modi neque sequi?<br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo ducimus quae recusandae odio voluptatem! Provident enim itaque sed, hic commodi blanditiis amet sequi beatae! Est quas inventore officiis facere sint ad deserunt provident, ea omnis vero voluptate doloribus dolores dolor commodi quis rem adipisci quaerat quam placeat quo aut voluptatem! <br> <br>For more Information check our online platforms:</p>
+<ul class="wrapper">
+  <a href="https://www.facebook.com/YouthScienceJournall?mibextid=kFxxJD">
+    <li class="icon facebook">
+        <span class="tooltip">Facebook</span>
+        <svg
+          viewBox="0 0 320 512"
+          height="1.2em"
+          fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
+          ></path>
+        </svg>
+      </li>
+  </a>
+  <a href="https://www.instagram.com/ysciencejournal?igsh=Ynh4dTV6ZWQ5bGF4">
+    <li class="icon instagram">
+        <span class="tooltip">Instagram</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="1.2em"
+          fill="currentColor"
+          class="bi bi-instagram"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
+          ></path>
+        </svg>
+      </li>
+  </a>
+  <a href="https://www.linkedin.com/company/ysj/">
+    <li class="icon linkedin">
+        <span class="tooltip">Linkedin</span>
+        <svg 
+        height="1.2em"
+        fill="currentColor"
+        xmlns="http://www.w3.org/2000/svg" 
+        viewBox="0 0 448 512"
+        >
+        <path 
+        d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z"/>
+    </svg>
+      </li>
+  </a>
+</ul>
+
+            <a href="IFYR.html?tab=app">
+                <button>Go to Application</button>
+            </a>
+        </div>
+        <form class="content" id="app-content" >
+            <div class="input-group">
+                <h3>Team <br> Information</h3>
+                <div class="input-fields">
+                    <div class="input-field">
+                        <label for="team-name">Team Name</label>
+                        <input type="text" placeholder="Team Name" id="team-name">
+                    </div>
+                    <div class="input-field">
+                        <label for="team-size">Team Size</label>
+                        <select placeholder="Team Size" id="team-size">
+                            <option value="solo">Solo (1)</option>
+                            <option value="due">Due (2)</option>
+                            <option value="trio">Trio (3)</option>
+                            <option value="squad">Squad (4)</option>
+                            <option value="quintet">Quintet (5)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="input-group">
+                <h3>Members <br> Information</h3>
+                <div class="input-fields">
+                    <h4>Leader Information</h4>
+                    <div class="input-field">
+                        <label for="member1-first-name">First Name</label>
+                        <input type="text" placeholder="First Name" id="member1-first-name">
+                    </div>
+                    <div class="input-field">
+                        <label for="member1-last-name">Last Name</label>
+                        <input type="text" placeholder="Last Name" id="member1-last-name">
+                    </div>
+                    <div class="input-field">
+                        <label for="member1-email-address">Email Adress</label>
+                        <input type="email" placeholder="First Name" id="member1-email-address">
+                    </div>
+                    <div class="input-field">
+                        <label for="member1-birthday">Birthday</label>
+                        <input type="date" placeholder="Birthday" id="member1-birthday">
+                    </div>
+                    <div class="input-field">
+                        <label for="member1-country">Country</label>
+                        <input type="text" placeholder="Country" id="member1-country">
+                    </div>
+                    <div class="input-field">
+                        <label for="member1-institution">Institution</label>
+                        <input type="text" placeholder="Institution" id="member1-institution">
+                    </div>
+                    <div id="member2">
+                        <h4>Member 2 Information</h4>
+                    <div class="input-field">
+                        <label for="member2-first-name">First Name</label>
+                        <input type="text" placeholder="First Name" id="member2-first-name">
+                    </div>
+                    <div class="input-field">
+                        <label for="member2-last-name">Last Name</label>
+                        <input type="text" placeholder="Last Name" id="member2-last-name">
+                    </div>
+                    <div class="input-field">
+                        <label for="member2-email-address">Email Adress</label>
+                        <input type="email" placeholder="First Name" id="member2-email-address">
+                    </div>
+                    <div class="input-field">
+                        <label for="member2-birthday">Birthday</label>
+                        <input type="date" placeholder="Birthday" id="member2-birthday">
+                    </div>
+                    <div class="input-field">
+                        <label for="member2-country">Country</label>
+                        <input type="text" placeholder="Country" id="member2-country">
+                    </div>
+                    <div class="input-field">
+                        <label for="member2-institution">Institution</label>
+                        <input type="text" placeholder="Institution" id="member2-institution">
+                    </div>
+                    </div>
+                    <div id="member3">
+                        <h4>Member 3 Information</h4>
+                    <div class="input-field">
+                        <label for="member3-first-name">First Name</label>
+                        <input type="text" placeholder="First Name" id="member3-first-name">
+                    </div>
+                    <div class="input-field">
+                        <label for="member3-last-name">Last Name</label>
+                        <input type="text" placeholder="Last Name" id="member3-last-name">
+                    </div>
+                    <div class="input-field">
+                        <label for="member3-email-address">Email Adress</label>
+                        <input type="email" placeholder="First Name" id="member3-email-address">
+                    </div>
+                    <div class="input-field">
+                        <label for="member3-birthday">Birthday</label>
+                        <input type="date" placeholder="Birthday" id="member3-birthday">
+                    </div>
+                    <div class="input-field">
+                        <label for="member3-country">Country</label>
+                        <input type="text" placeholder="Country" id="member3-country">
+                    </div>
+                    <div class="input-field">
+                        <label for="member3-institution">Institution</label>
+                        <input type="text" placeholder="Institution" id="member3-institution">
+                    </div>
+                    </div>
+                    <div id="member4">
+                        <h4>Member 4 Information</h4>
+                    <div class="input-field">
+                        <label for="member4-first-name">First Name</label>
+                        <input type="text" placeholder="First Name" id="member4-first-name">
+                    </div>
+                    <div class="input-field">
+                        <label for="member4-last-name">Last Name</label>
+                        <input type="text" placeholder="Last Name" id="member4-last-name">
+                    </div>
+                    <div class="input-field">
+                        <label for="member4-email-address">Email Adress</label>
+                        <input type="email" placeholder="First Name" id="member4-email-address">
+                    </div>
+                    <div class="input-field">
+                        <label for="member4-birthday">Birthday</label>
+                        <input type="date" placeholder="Birthday" id="member4-birthday">
+                    </div>
+                    <div class="input-field">
+                        <label for="member4-country">Country</label>
+                        <input type="text" placeholder="Country" id="member4-country">
+                    </div>
+                    <div class="input-field">
+                        <label for="member4-institution">Institution</label>
+                        <input type="text" placeholder="Institution" id="member4-institution">
+                    </div>
+                    </div>
+                    <div id="member5">
+                        <h4>Member 5 Information</h4>
+                    <div class="input-field">
+                        <label for="member5-first-name">First Name</label>
+                        <input type="text" placeholder="First Name" id="member5-first-name">
+                    </div>
+                    <div class="input-field">
+                        <label for="member5-last-name">Last Name</label>
+                        <input type="text" placeholder="Last Name" id="member5-last-name">
+                    </div>
+                    <div class="input-field">
+                        <label for="member5-email-address">Email Adress</label>
+                        <input type="email" placeholder="First Name" id="member5-email-address">
+                    </div>
+                    <div class="input-field">
+                        <label for="member5-birthday">Birthday</label>
+                        <input type="date" placeholder="Birthday" id="member5-birthday">
+                    </div>
+                    <div class="input-field">
+                        <label for="member5-country">Country</label>
+                        <input type="text" placeholder="Country" id="member5-country">
+                    </div>
+                    <div class="input-field">
+                        <label for="member5-institution">Institution</label>
+                        <input type="text" placeholder="Institution" id="member5-institution">
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="input-group">
+                <h3>Paper <br> Information</h3>
+                <div class="input-fields">
+                    <div class="input-field">
+                        <label for="paper-title">Paper Title</label>
+                        <input type="text" placeholder="Paper Title" id="paper-title">
+                    </div>
+                    <label for="radio-input" class="radio-label">Paper Category</label>
+                    <div class="radio-input" id="radio-input">
+                        <label class="label">
+                          <input type="radio" id="scientific-paper" checked name="paper-category" value="Scientific Paper">
+                          <p class="text">Scientific Paper</p>
+                        </label>
+                        <label class="label">
+                          <input type="radio" id="review-paper" name="paper-category" value="Review Paper">
+                          <p class="text">Review Paper</p>
+                        </label>
+                        <label class="label">
+                          <input type="radio" id="analysis-paper" name="paper-category" value="Analysis Paper">
+                          <p class="text">Analysis Paper</p>
+                        </label>
+                      </div>
+                      <label for="radio-input" class="radio-label">Paper Field</label>
+                    <div class="radio-input" id="radio-input">
+                        <label class="label">
+                          <input type="radio" id="behavioral-and-social-sciences" checked name="paper-field" value="Behavioral and Social Sciences">
+                          <p class="text">Behavioral and Social Sciences</p>
+                        </label>
+                        <label class="label">
+                          <input type="radio" id="technology" name="paper-field" value="Technology">
+                          <p class="text">Technology</p>
+                        </label>
+                        <label class="label">
+                          <input type="radio" id="mathematics" name="paper-field" value="Mathematics">
+                          <p class="text">Mathematics</p>
+                        </label>
+                      </div>
+                </div>
+            </div>
+            <div class="input-group">
+                <h3>paper <br> upload</h3>
+                <div class="input-fields">
+                    <label for="radio-input" class="radio-label">Upload Paper now?</label>
+                    <div class="radio-input" id="radio-input" style="margin-bottom: 20px;">
+                        <label class="label">
+                          <input type="radio" id="yes" checked  name="if-upload" value="Yes">
+                          <p class="text">Yes</p>
+                        </label>
+                        <label class="label">
+                          <input type="radio" id="review-paper"  name="if-upload" value="No">
+                          <p class="text">No</p>
+                        </label>
+                      </div>
+                    <div id="paper-upload-con">
+                        <div class="file-container" id="file-container">
+                            <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                            <p>Click here to upload the paper<br><span>File Formats: docs, docx, pdf, html</span>
+                            </p>
+                            <input type="file" id="file-input" style="display: none;">
+                          </div>
+                          <label class="radio-label">Uploaded Paper</label>
+                          <div class="file-data">
+                            <p id="file-name">No file uploaded </p>
+                            <button id="remove-file">Remove</button>
+                          </div>
+                    </div>
+                  </div>
+            </div>
+            
+            <div class="input-group">
+                <h3>App <br> managment</h3>
+                <div class="input-fields">
+                    <div class="buttons">
+                
+                      <button type="submit">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+        
+    </div>
+    <footer>
+        <h2>If you encounter any problems, please contact US</h2>
+        <div class="contact-icons">
+            <a href="mailto:competition@ys-journal.org">
+                <div class="contact-icon">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p>competition@ys-journal.org</p>
+                </div>
+            </a>
+            <a href="tel:+201102432367">
+                <div class="contact-icon">
+                    <i class="fa-solid fa-phone"></i>
+                    <p>+201102432367</p>
+                </div>
+            </a>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <script type="module" src="js/IFYR.js"></script>
+</body>
+</html>
